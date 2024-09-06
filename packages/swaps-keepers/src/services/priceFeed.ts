@@ -74,7 +74,6 @@ export default class PriceFeed {
         const fastPriceContract = FastPriceFeed__factory.connect(secondaryPriceFeed, signer);
 
         this.updateLastUpdatedAt(fastPriceContract);
-
         // the max the contracts check is 8
         const numTokens = Object.keys(KnownTokenMap[network as NETWORK]).length;
         const indexes = [...Array(numTokens).keys()];

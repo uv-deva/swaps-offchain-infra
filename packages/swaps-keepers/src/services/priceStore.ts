@@ -24,11 +24,11 @@ const DEFAULT_PRICE_THRESHOLD = process.env.PRICE_THRESHOLD
 const assetThresholds: Record<KnownToken, ethers.BigNumber> = {
     [KnownToken.ETH]: DEFAULT_PRICE_THRESHOLD,
     [KnownToken.BTC]: DEFAULT_PRICE_THRESHOLD,
-    [KnownToken.LINK]: ethers.utils.parseEther("0.003"),
-    [KnownToken.UNI]: ethers.utils.parseEther("0.003"),
-    [KnownToken.FXS]: ethers.utils.parseEther("0.005"),
-    [KnownToken.BAL]: ethers.utils.parseEther("0.005"),
-    [KnownToken.CRV]: ethers.utils.parseEther("0.005"),
+    // [KnownToken.LINK]: ethers.utils.parseEther("0.003"),
+    // [KnownToken.UNI]: ethers.utils.parseEther("0.003"),
+    // [KnownToken.FXS]: ethers.utils.parseEther("0.005"),
+    // [KnownToken.BAL]: ethers.utils.parseEther("0.005"),
+    // [KnownToken.CRV]: ethers.utils.parseEther("0.005"),
 };
 
 export class PriceStore extends TypedEmitter<PriceEvents> {

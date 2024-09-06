@@ -10,9 +10,9 @@ export type PriceFeedToken = LabelledToken & {
 export enum KnownToken {
     ETH = "ETH",
     BTC = "BTC",
-    LINK = "LINK",
-    UNI = "UNI",
-    FXS = "FXS",
-    CRV = "CRV",
-    BAL = "BAL",
+    // LINK = "LINK",
+    // UNI = "UNI",
+    // FXS = "FXS",
+    // CRV = "CRV",
+    // BAL = "BAL",
 }

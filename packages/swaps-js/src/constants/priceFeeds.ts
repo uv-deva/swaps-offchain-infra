@@ -10,11 +10,11 @@ export const knownTokenToBinanceSymbols: Record<KnownToken, string> = {
     [KnownToken.ETH]: "ETHUSDT",
     [KnownToken.BTC]: "BTCUSDT",
     // [KnownToken.BTC]: 'WBTCBUSD',
-    [KnownToken.LINK]: "LINKUSDT",
-    [KnownToken.UNI]: "UNIUSDT",
-    [KnownToken.CRV]: "CRVUSDT",
-    [KnownToken.FXS]: "FXSUSDT",
-    [KnownToken.BAL]: "BALUSDT",
+    // [KnownToken.LINK]: "LINKUSDT",
+    // [KnownToken.UNI]: "UNIUSDT",
+    // [KnownToken.CRV]: "CRVUSDT",
+    // [KnownToken.FXS]: "FXSUSDT",
+    // [KnownToken.BAL]: "BALUSDT",
 };
 export const binanceSymbolToKnownToken: Record<string, KnownToken> = Object.keys(knownTokenToBinanceSymbols).reduce(
     (o, k) => ({
@@ -38,10 +38,10 @@ export const createBinanceWsFeeds = (tokens: KnownToken[]) =>
 export const knownTokenToBitfinexSymbols: Partial<Record<KnownToken, string>> = {
     [KnownToken.ETH]: "tETHUSD",
     [KnownToken.BTC]: "tBTCUSD",
-    [KnownToken.LINK]: "tLINK:USD",
-    [KnownToken.UNI]: "tUNIUSD",
-    [KnownToken.CRV]: "tCRVUSD",
-    [KnownToken.BAL]: "tBALUSD",
+    // [KnownToken.LINK]: "tLINK:USD",
+    // [KnownToken.UNI]: "tUNIUSD",
+    // [KnownToken.CRV]: "tCRVUSD",
+    // [KnownToken.BAL]: "tBALUSD",
     // This feed doesnt exist
     // [KnownToken.FXS]: 'tFXSUSD',
 };
@@ -68,11 +68,11 @@ export const createBitfinexWsFeeds = (tokens: KnownToken[]) => {
 export const knownTokenToFTXSymbols: Record<KnownToken, string> = {
     [KnownToken.ETH]: "ETH/USD",
     [KnownToken.BTC]: "BTC/USD",
-    [KnownToken.LINK]: "LINK/USD",
-    [KnownToken.UNI]: "UNI/USD",
-    [KnownToken.CRV]: "CRV/USD",
-    [KnownToken.FXS]: "FXS/USD",
-    [KnownToken.BAL]: "BAL/USD",
+    // [KnownToken.LINK]: "LINK/USD",
+    // [KnownToken.UNI]: "UNI/USD",
+    // [KnownToken.CRV]: "CRV/USD",
+    // [KnownToken.FXS]: "FXS/USD",
+    // [KnownToken.BAL]: "BAL/USD",
 };
 export const ftxSymbolToKnownToken: Record<string, KnownToken> = Object.keys(knownTokenToFTXSymbols).reduce(
     (o, k) => ({ ...o, [knownTokenToFTXSymbols[k as KnownToken]]: k }),
@@ -88,13 +88,13 @@ export const createFtxWsFeeds = (tokens: KnownToken[]) =>
 // all tickers https://api.crypto.com/v2/public/get-ticker
 // dont fetch for all
 export const knownTokenToCryptoComSymbols: Partial<Record<KnownToken, string>> = {
-    // [KnownToken.ETH]: "ETH_USD",
+    [KnownToken.ETH]: "ETH_USD",
     [KnownToken.BTC]: "BTC_USD",
     // [KnownToken.BTC]: 'WBTC_USD',
     // [KnownToken.LINK]: 'LINK_USD',
     // [KnownToken.UNI]: 'UNI_USD',
     // [KnownToken.CRV]: 'CRV_USD',
-    [KnownToken.FXS]: "FXS_USD",
+    // [KnownToken.FXS]: "FXS_USD",
     // [KnownToken.BAL]: 'BAL_USD',
 };
 
@@ -125,10 +125,10 @@ export const knownTokenToCoinbaseSymbols: Partial<Record<KnownToken, string>> = 
     [KnownToken.ETH]: "ETH-USD",
     [KnownToken.BTC]: "BTC-USD",
     // [KnownToken.BTC]: 'WBTC-USD',
-    [KnownToken.LINK]: "LINK-USD",
-    [KnownToken.UNI]: "UNI-USD",
-    [KnownToken.CRV]: "CRV-USD",
-    [KnownToken.BAL]: "BAL-USD",
+    // [KnownToken.LINK]: "LINK-USD",
+    // [KnownToken.UNI]: "UNI-USD",
+    // [KnownToken.CRV]: "CRV-USD",
+    // [KnownToken.BAL]: "BAL-USD",
 };
 
 export const coinbaseSymbolToKnownToken: Partial<Record<string, KnownToken>> = Object.keys(
