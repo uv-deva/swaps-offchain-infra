@@ -159,8 +159,8 @@ const main = async () => {
 
     const feedContract = VaultPriceFeed__factory.connect(priceFeedAddress, provider);
     const secondaryPriceFeed = await feedContract.secondaryPriceFeed();
-    let fastPriceContract = FastPriceFeed__factory.connect(secondaryPriceFeed, signer);
 
+    let fastPriceContract = FastPriceFeed__factory.connect(secondaryPriceFeed, signer);
     const priceFeed = await PriceFeed.Create({
         priceFeed: priceFeedAddress,
         signer,
@@ -173,8 +173,8 @@ const main = async () => {
     });
     // position router can change when setting new provider
     let positionRouter = initNewPositionRouter(priceFeed, fastPriceContract, positionKeeper, provider);
-
     if (isWsProvider(rpc)) {
+        console.log("hjgasgkj");
         handleClosedConnection(provider as ethers.providers.WebSocketProvider, async (newProvider) => {
             logger.info(`Reconnecting websocket provider: ${newProvider.connection.url}`);
             const providerIsHealthy = await checkProviderHealth(newProvider);
@@ -210,12 +210,14 @@ const main = async () => {
         // set initial prices
         const initialPrices = await priceFeed.fetchFeedPrices(fastPriceContract);
         const lastUpdatedAt = priceFeed.lastUpdatedAt;
+        console.log("deno1")
         priceStore.storeFeedPrices(initialPrices, lastUpdatedAt, true);
 
+        console.log("deno2")
         // subscribe ws feeds
         const tokens = priceFeed.tokens;
         subscribeWsFeeds(tokens?.map((token) => token.knownToken) ?? []);
-
+        console.log("deno3")
         // periodically check lastUpdatedThreshold
         asyncInterval({
             fn: async () => {
@@ -230,6 +232,8 @@ const main = async () => {
                     pricePoller.fetchCryptoComPrices().catch((error) => pricePollerError(error, "cryptoCom")),
                     priceFeed.fetchFeedPrices(fastPriceContract),
                 ]);
+    console.log("emofasf")                    
+
                 priceStore.storePrices("binance", binancePrices, true);
                 priceStore.storePrices("bitfinex", bitFinexPrices, true);
                 priceStore.storePrices("cryptoCom", cryptoComPrices, true);

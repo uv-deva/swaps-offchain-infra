@@ -12,7 +12,7 @@ export const callContract = async (contract: ethers.Contract, fn: string, txnPar
         logger.info(`Calling ${label}, promise will timeout after 3 seconds`);
         result = attemptPromiseRecursively({
             promise: () => contract[fn](...txnParams),
-            timeout: 3000,
+            timeout: 10000,
             timeoutMessage: `${label} call timed out after 3 seconds`,
         });
         return result;

@@ -11,26 +11,26 @@ export const networkTokens: Record<string, LabelledToken[]> = {
             address: "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
             knownToken: KnownToken.BTC,
         },
-        {
-            address: "0xf97f4df75117a78c1A5a0DBb814Af92458539FB4",
-            knownToken: KnownToken.LINK,
-        },
-        {
-            address: "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
-            knownToken: KnownToken.UNI,
-        },
-        {
-            address: "0x9d2F299715D94d8A7E6F5eaa8E654E8c74a988A7",
-            knownToken: KnownToken.FXS,
-        },
-        {
-            address: "0x040d1EdC9569d4Bab2D15287Dc5A4F10F56a56B8",
-            knownToken: KnownToken.BAL,
-        },
-        {
-            address: "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
-            knownToken: KnownToken.CRV,
-        },
+        // {
+        //     address: "0xf97f4df75117a78c1A5a0DBb814Af92458539FB4",
+        //     knownToken: KnownToken.LINK,
+        // },
+        // {
+        //     address: "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
+        //     knownToken: KnownToken.UNI,
+        // },
+        // {
+        //     address: "0x9d2F299715D94d8A7E6F5eaa8E654E8c74a988A7",
+        //     knownToken: KnownToken.FXS,
+        // },
+        // {
+        //     address: "0x040d1EdC9569d4Bab2D15287Dc5A4F10F56a56B8",
+        //     knownToken: KnownToken.BAL,
+        // },
+        // {
+        //     address: "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
+        //     knownToken: KnownToken.CRV,
+        // },
     ],
     [NETWORK.ARBITRUM_RINKEBY]: [
         {
@@ -51,10 +51,24 @@ export const networkTokens: Record<string, LabelledToken[]> = {
             address: "0x4CC823834038c92CFA66C40C7806959529A3D782",
             knownToken: KnownToken.BTC,
         },
+        // {
+        //     address: "0x6E7155bde03E582e9920421Adf14E10C15dBe890",
+        //     knownToken: KnownToken.LINK,
+        // },
+    ],
+    [NETWORK.tDEPO]: [
         {
-            address: "0x6E7155bde03E582e9920421Adf14E10C15dBe890",
-            knownToken: KnownToken.LINK,
+            address: "0x60D6b8643e05BeE30E8FE09B17f8Af3A82e5A003",
+            knownToken: KnownToken.ETH,
         },
+        {
+            address: "0x1b0266eD4976E5EbE2140f4229ca39803ACE4a84",
+            knownToken: KnownToken.BTC,
+        },
+        // {
+        //     address: "0x4AEB9830a73197E3713fe4331491f1FFaE489717",
+        //     knownToken: KnownToken.LINK,
+        // },
     ],
 };
 
